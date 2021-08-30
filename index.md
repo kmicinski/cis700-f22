@@ -101,8 +101,51 @@ layout: mainpage
       <th scope="row">8/31</th>
       <td>Lecture</td>
       <td>L0</td>
-      <td>Course Introduction</td>
+      <td>Course Introduction, Assembly intro</td>
     </tr>
+	<tr class="table-success">
+      <th scope="row">9/2</th>
+      <td>Lecture</td>
+      <td>L1</td>
+      <td><a href="https://people.eecs.berkeley.edu/~dawnsong/papers/Oakland13-SoK-CR.pdf">SoK: Eternal War in Memory</a>, Sections I-III.</td>
+    </tr>
+    <tr class="table-success">
+      <th scope="row">8/31</th>
+      <td>Lecture</td>
+      <td>L2</td>
+      <td>Spatial and Temporal Safety</td>
+    </tr>
+    <tr class="table-success">
+      <th scope="row">8/31</th>
+      <td>Lecture</td>
+      <td>L3</td>
+      <td><a href="https://people.eecs.berkeley.edu/~dawnsong/papers/Oakland13-SoK-CR.pdf">SoK: Eternal War in Memory</a>, rest of the paper.</td>
+    </tr>
+    <tr class="table-success">
+      <th scope="row">8/31</th>
+      <td>Lecture</td>
+      <td>L4</td>
+      <td>Shellcoding and ASLR</td>
+    </tr>
+    <tr class="table-success">
+      <th scope="row">8/31</th>
+      <td>Lecture</td>
+      <td>L5</td>
+      <td>Breaking Kernel Address Space Layout Randomization with Intel TSX</td>
+    </tr>
+    <tr class="table-success">
+      <th scope="row">8/31</th>
+      <td>Lecture</td>
+      <td>L6</td>
+      <td>Return-to-libc and ROP</td>
+    </tr>
+    <tr class="table-success">
+      <th scope="row">8/31</th>
+      <td>Lecture</td>
+      <td>L7</td>
+      <td>The Geometry of Innocent Flesh on the Bone: Return-into-libc without Function Calls (on the x86).</td>
+    </tr>
+
     <!-- <tr class="table-danger"> -->
     <!--   <th scope="row">TBA</th> -->
     <!--   <td>Exam</td> -->

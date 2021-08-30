@@ -1,8 +1,8 @@
 # Site settings
-title: CIS352
-baseurl: "cis352-s21" #"cis352"
-url: "http://kmicinski.com/"
-description: "CMSC352--Principles of Programming Languages (Spring '21) at Syracuse"
+title: Malware Analysis
+baseurl: "cis700-f21"
+url: "https://kmicinski.com/"
+description: "CIS700--Special Topics in Computer Science, Malware Analysis, at Syracuse U"
 permalink: pretty
 
 # Build settings
