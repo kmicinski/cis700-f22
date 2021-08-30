@@ -1,7 +1,7 @@
 # Site settings
 title: CIS700
 baseurl: "cis700-f21"
-url: "http://kmicinski.com/"
+url: "https://kmicinski.com/"
 description: "CMSC700--Malware Analysis (Fall '21) at Syracuse"
 permalink: pretty
 
