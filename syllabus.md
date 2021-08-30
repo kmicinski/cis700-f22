@@ -3,370 +3,110 @@ title: Syllabus
 layout: default
 ---
 
-## Programming Languages: Theory and Practice
-(*CIS 352* at Syracuse U)
+## Introduction to Compiler Construction
+(*CIS 400* (a Special Topics course) at Syracuse U)
 
 **Note**: parts of this syllabus are subject to change with adequate
 notice to students.
 
-An introduction to the design and implementation of programming
-languages, focused on operational semantics and interpreters. This
-course is heavily project-focused and usees a specification-based
-grading rubric to teach both formal (written) and practical (coding)
-skills.
-
-**Workload**:
-  - Asynchronous video lecture units (at most ~80min per week)
-  - Participation points:
-    - Quiz before each lecture (closes as lecture begins)
-    - See other sources of participation below
-  - 6 projects
-  - 3 quizzes and a final, all cumulative (see grading note).
-  - This will be a project intensive class. Approximately 6-10
-    hours per week *outside* of class will be expected from
-    students. I recommend against taking this course concurrent with
-    other project-heavy courses.
+An introduction to the design and engineering of compilers for modern
+(particularly functional) programming languages. The course will
+consist of a semester-long (through five automatically-graded and one
+final) project wherein students build a compiler from (a significant
+subset of) Scheme to LLVM assembly code. Course delivery will be
+lecture-based, with occasionaly-assigned videos (from the companion
+course CIS352) but classtime will also focus significantly on helping
+students develop their engineering and debugging skills along with
+giving directed help (i.e., hints) about how to achieve the project.
 
 ## Grading
 
-CIS352 employs a *specification-based grading* methodology. There are
-three categories of assignments:
+- 5 autograder projects (50% total, 10% each)
+  - Projects will be handed out and graded via autograder.org. Students will receive a password in the first week of class. If you have not yet received a password and need one, please email me (kkmicins@syr.edu).
+- 2 take-home midterms (30% total, 15% each)
+  - Consisting of several open-ended questions to be answered in professionally-written thoughtful prose, relying upon examples when necessary.
+  - Students _may collaborate_ with *up to two other* students (i.e.,
+    max group size of three students) under the following policy. Each
+    student submitting an answer collaboratively will be briefly
+    quizzed (via Zoom or Slack) to explain portions of their solution.
+    I (instructor) reserve the right to lower a group member's grade
+    if they are not able to sufficiently explain their solution. I
+    will specifically not be adversarially quizzing students on all
+    fine-grained details of the solution, nor do I expect every
+    student to do a precisely-equal amount of the work, but I expect
+    that every student can at least explain the work they submit as
+    part of a group.
+- 1 final project (20%)
+   - This project is a wrap-up of your previous project milestones
+   into an end-to-end compiler. Each of the autograder projects is
+   tested independently to avoid penalizing students for compound
+   error induced by a bug in a part of their compiler not being
+   assessed on the project at hand. Thus, the final project will have
+   students combine each of these passes into an end-to-end compiler
+   along with adding a feature of their choosing (will be discussed in
+   class, must be approved by instructor).
+ - Bonus +5% participation
+   - I will sporadically announce various opportunities for 1%
+     participation credit. You may earn up to 5% this way. You will
+     earn no additional points once you saturate your 5% for the
+     semester.
 
-- Participation Credit (at least 30+ available)
-  - &gt;50% participation quiz (on Blackboard) before each class gives 1 point, closes when class begins.
-  - Volunteering to livecode in class gives 2 points. Students are
-    encouraged to present, and we will work to establish a positive
-    environment where all students can make progress even if they
-    don't at first succeed. However, if you feel you simply cannot
-    livecode in class you may ask me about doing some individualized
-    programming instruction with the TAs / instructor instead.
-  - "Introduce yourself" to class (1 minute answer to question) gives 1 point.
-  - "Meet your professor" to discuss career goals gives 1 point.
-  - Groups that present answers to in-class questions will receive 1 point.
-- 6 programming projects
-  - Projects are assigned throughout the term. All projects are due at
-    11:59PM the last day of classes at SU (Friday, May 14, 2021 at
-    11:59PM US Eastern Time).
-  - 1 participation point will be awarded to all students who have &gt;50% test completion within 10 days of project handout.
-  - Projects will be graded via the autograder.
-- 12 exam questions
-  - There are three 60-minute quizzes and one 120-minute exam.
-  - *All* quizzes / exams will be cumulative.
-  - Exam questions will all be derived from the [written learning
-    objectives]({{ "/learning-objectives" | absolute_url }}) for
-    CIS352.
+## Grade cutoffs
 
-### Informal Grading Rules for CIS352
+I anticipate this will be course that will require a serious (but not
+overwhelming) amount of work from you, but I think there are many
+paths to getting a good grade. Below are projected rough grade
+cutoffs. However, I am making no guarantees about these at all for now
+(although I will likely not make grading any harder than this). I will
+announce final grade cutoffs roughly two weeks before the end of the
+term on Slack (and then update them here).
 
-<div class="container">
-  <div class="row">
-    <div class="leftside">
-      <table class="table table-sm table-striped grade-table table-hover">
-        <thead>
-          <tr class="gradestop">
-            <th class="projdesc" colspan="3" scope="col"><strong>Projects</strong></th>
-            <th class="examdesc" colspan="2" scope="col"><strong>Exam Questions</strong></th>
-            <th scope="col">Grade</th>
-          </tr>
-          <tr class="gradestop">
-            <th class="smhgradecol" scope="col">Minimal</th>
-            <th class="smhgradecol" scope="col">Satisfactory</th>
-            <th class="lghgradecol" scope="col">Excellent</th>
-            <th class="smhgradecol" scope="col">Satisfactory</th>
-            <th class="lghgradecol" scope="col">Excellent</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr id="gradea">
-            <td class="smgradecol">6/6</td>
-            <td class="smgradecol">5/6</td>
-            <td class="lggradecol">3/6</td>
-            <td class="smgradecol">12/12</td>
-            <td class="lggradecol">6/12</td>
-            <th scope="row">A</th>
-          </tr>
-          <tr id="gradeam">
-            <td class="smgradecol">5/6</td>
-            <td class="smgradecol">5/6</td>
-            <td class="lggradecol">2/6</td>
-            <td class="smgradecol">11/12</td>
-            <td class="lggradecol">5/12</td>
-            <th scope="row">A-</th>
-          </tr>
-          <tr>
-            <td class="smgradecol">4/6</td>
-            <td class="smgradecol">4/6</td>
-            <td class="lggradecol">2/6</td>
-            <td class="smgradecol">10/12</td>
-            <td class="lggradecol">5/12</td>
-            <th scope="row">B+</th>
-          </tr>
-          <tr>
-            <td class="smgradecol">4/6</td>
-            <td class="smgradecol">3/6</td>
-            <td class="lggradecol">1/6</td>
-            <td class="smgradecol">9/12</td>
-            <td class="lggradecol">4/12</td>
-            <th scope="row">B</th>
-          </tr>
-          <tr>
-            <td class="smgradecol">4/6</td>
-            <td class="smgradecol">3/6</td>
-            <td class="lggradecol">1/6</td>
-            <td class="smgradecol">9/12</td>
-            <td class="lggradecol">3/12</td>
-            <th scope="row">B-</th>
-          </tr>
-          <tr>
-            <td class="smgradecol">3/6</td>
-            <td class="smgradecol">2/6</td>
-            <td class="lggradecol">1/6</td>
-            <td class="smgradecol">8/12</td>
-            <td class="lggradecol">2/12</td>
-            <th scope="row">C+</th>
-          </tr>
-          <tr>
-            <td class="smgradecol">3/6</td>
-            <td class="smgradecol">3/6</td>
-            <td class="lggradecol">1/6</td>
-            <td class="smgradecol">8/12</td>
-            <td class="lggradecol">1/12</td>
-            <th scope="row">C</th>
-          </tr>
-          <tr>
-            <td class="smgradecol">3/6</td>
-            <td class="smgradecol">3/6</td>
-            <td class="lggradecol">0/6</td>
-            <td class="smgradecol">8/12</td>
-            <td class="lggradecol">0/12</td>
-            <th scope="row">C-</th>
-          </tr>
-          <tr>
-            <td class="smgradecol">3/6</td>
-            <td class="smgradecol">2/6</td>
-            <td class="lggradecol">0/6</td>
-            <td class="smgradecol">6/12</td>
-            <td class="lggradecol">0/12</td>
-            <th scope="row">D</th>
-          </tr>
-          <tr>
-            <td class="smgradecol">&lt; 3/6</td>
-            <td class="smgradecol">&lt; 3/6</td>
-            <td class="lggradecol">0/6</td>
-            <td class="smgradecol">&lt; 7/12</td>
-            <td class="lggradecol">0/12</td>
-            <th scope="row">&lt;D</th>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="rightside">
-      <!-- <div id="projectquestions"> -->
-      <!--   <h5 class="pcardtitle">Projects</h5> -->
-      <!--   <div id="projects" class="egrade" grade="A"> -->
-      <!--     <svg width="100" height="100" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg"> -->
-      <!--       <circle class="pfail" r="40" cx="50" cy="50" fill="transparent" stroke-dashoffset="0"></circle> -->
-      <!--       <circle class="pminimal" r="40" cx="50" cy="50" fill="transparent" stroke-dashoffset="0"></circle> -->
-      <!--       <circle class="psat" r="40" cx="50" cy="50" fill="transparent" stroke-dashoffset="0"></circle> -->
-      <!--       <circle class="pex" r="40" cx="50" cy="50" fill="transparent" stroke-dashoffset="0"></circle> -->
-      <!--     </svg> -->
-      <!--   </div> -->
-      <!--   <p class="points"> -->
-      <!--     3 <strong class="ex">Excellent</strong> -->
-      <!--     &nbsp;5 <strong class="sat">Satisfactory</strong> -->
-      <!--   </p> -->
-      <!--   <p class="points" id="min">6 <strong class="min">Minimal</strong></p> -->
-      <!-- </div> -->
-      <!-- <div> -->
-      <!--   <div id="examquestions"> -->
-      <!--     <h5 class="pcardtitle">Exam Questions</h5> -->
-      <!--     <div id="exams" class="egrade" grade="A"> -->
-      <!--       <svg grade="A" class="gpa" width="100" height="100" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg"> -->
-      <!--         <circle class="efail" r="40" cx="50" cy="50" fill="transparent" stroke-dashoffset="0"></circle> -->
-      <!--         <circle class="esat" r="40" cx="50" cy="50" fill="transparent" stroke-dashoffset="0"></circle> -->
-      <!--         <circle class="eex" r="40" cx="50" cy="50" fill="transparent" stroke-dashoffset="0"></circle> -->
-      <!--       </svg> -->
-      <!--     </div> -->
-      <!--     <p class="points"> -->
-      <!--       6 <strong class="ex">Excellent</strong> -->
-      <!--       &nbsp;12 <strong class="sat">Satisfactory</strong> -->
-      <!--     </p> -->
-      <!--   </div> -->
-      <!-- </div> -->
-
-      <table class="table table-sm table-striped grade-table participation">
-        <thead>
-          <tr class="gradestop">
-            <th scope="col"><strong>Participation</strong></th>
-            <th scope="col"><strong>GPA Δ</strong></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="smgradecol">&lt; 20</td>
-            <th scope="row">-</th>
-          </tr>
-          <tr>
-            <td class="smgradecol">&geq; 20 &ndash; &lt; 30</td>
-            <th scope="row">=</th>
-          </tr>
-          <tr>
-            <td class="smgradecol">&geq; 30</td>
-            <th scope="row">+</th>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
-<!-- <script> -->
-<!-- $(document).ready(function() { -->
-<!--   window.update_gpa = function(p0,p1,p2,e0,e1) { -->
-<!--     var update = function(id,num,tot) { -->
-<!--       var r = id.attr('r'); -->
-<!--       var c = Math.PI*(r*2); -->
-<!--       var doffset = (1-(num/tot))*c; -->
-<!--       id.css({'stroke-dasharray': `${c} ${c}`}); -->
-<!--       id.css({'stroke-dashoffset': `${circumference}`}); -->
+- 91% -- A
+- 88% -- A-
+- 84% -- B+
+- 80% -- B
+- 76% -- B-
+- 73% -- C+
+- 68% -- C
+- 64% -- C-
+- 55% -- D
+- 0%  -- F
 
 
-<!-- id.css({ 'stroke-dasharray': doffset}) -->
-<!--     } -->
-<!--     update($('.pminimal'),p0,6); -->
-<!--     update($('.psat'),p1,6); -->
-<!--     update($('.pex'),p2,6); -->
-<!--     update($('.esat'),e0,12); -->
-<!--     update($('.eex'),e1,12); -->
-<!--   } -->
-<!--   $('#gradea').hover(function() { window.update_gpa(6,5,3,12,6); }); -->
-<!--   $('#gradeam').hover(function() { window.update_gpa(5,5,2,11,5); }); -->
-<!--   $('#gradebp').hover(function() { window.update_gpa(4,4,2,10,5); }); -->
-<!-- }); -->
-<!-- </script> -->
+## Autograder
 
-- Your grade consists of participation, projects, and quiz / exam
-  questions.
-- The bulk of this is projects and exams, and most of your time will
-  be spent on projects.
-- Projects are graded as either non-satisfactory,
-  minimally-satisfactory, satisfactory, or excellent.
-- Projects are graded via the autograder. You may submit as many times
-  as you like up until 11:59PM on the last day of class (Friday, May
-  14 at 11:59PM). However, the autograder will rate-limit you by
-  providing you with a set number of tokens per day. Specs for
-  minimal, satisfactory, and excellent are given on a per-project
-  basis.
-- There are 12 quiz / exam questions, and every exam is cumulative. If
-  you miss a question on Q0, you can reattempt the same learning
-  outcome (e.g., basic recursion) on Q1 and so on.
-- However, students may only submit up to six answers for each quiz / exam.
-- Quizzes are 60 minutes, and include questions for each learning
-  objective covered in the course so far. The final is cumulative and
-  is scheduled for 120 minutes. While you may still submit only six
-  new answers, the expanded time may give you time to refine excellent
-  solutions.
-- Based on the above, you may represent your project grade as a
-  three-tuple (p₀,p₁,p₂) where p₀ specifies the number of minimal
-  projects, p₁ the number of satisfactory, and p₂ the number of
-  excellent projects you have submitted. Remember that each
-  satisfactory project is also minimally-satisfactory and so on.
-- Similarly, exam questions may be represented as a pair (e₀,e₁) where
-  e₀ represents the number of satisfactory solutions and e₁ represents
-  the number of excellent solutions.
-- Using the project grade (p₀,p₁,p₂) and exam grades (e₀,e₁) you may
-  calculate a raw gradepoint using the table below. The final
-  gradepoint is given by taking a minus of the raw gradepoint (e.g.,
-  decreasing 4.0 to 3.7) if participation points are < 20, make no
-  change if participation points are > 20 but < 30, and add a plus
-  (e.g., bumping 3.7 to 4.0) if participation grade is ≥ 30. Note that
-  assigned grades cannot go above 4.0, but the instructor will track
-  this for recommendation letters and references.
+Projects in this course will be graded by an automatic grader. I may
+adjust projects so that portions of the projects include style-based
+grading, though I will *not* employ subjective grading. More
+pointedly: I will *not* award partial credit for solutions that have
+the right ideas but do not pass our tests.
 
+## Late Projects and Extensions
 
+I used to extend project deadlines, but I have found that it severely
+limits course pacing in a seriously detrimental way. Therefore,
+project extensions will be rare--and only in the event of things such
+as university closures. Project extensions for students will not be
+granted except for religious observances and extenuating circumstances
+(family illness, etc..). However, there is a late policy, written as follows:
 
+- Projects turned in on time will earn a maximum of 100%
 
-<!-- ## Course Overview -->
+- Projects turned in up to 72 hours late will have a 15% penalty
+  applied.
 
-<!-- This course will introduce many of the principles of programming -->
-<!-- language design and implementation. We will discuss numerous features -->
-<!-- of several programming languages and the algorithms and data -->
-<!-- structures that are needed to provide these features. Projects will -->
-<!-- cover both the use of various features and high-level understanding -->
-<!-- the algorithms and data structures involved in their -->
-<!-- implementation. -->
+- Projects turned in after 72 hours late (until the end of the term)
+  will have a 30% penalty applied.
 
-<!-- Lectures and labs will include examples (and exercises) in Racket. No -->
-<!-- prior knowledge of Racket is needed for this course, but students -->
-<!-- should be familiar with the programming techniques from their -->
-<!-- lower-level courses and possess fluency in basic functional -->
-<!-- programming. -->
+- Your project grade always be the maximum possible. For example,
+  let's say you make an on-time project submission for 60%, but the
+  next day you turn in a project which earns an 75%. This submission
+  would earn a 63.75%. Five days after the deadline you turn in a
+  project earning 100%. Your final score is 70%, as the 70% (100% with
+  a 30% penalty) still got the maximum grade of any submission.
 
-<!-- ## Grading -->
-
-<!-- - Projects: 56% -->
-<!-- - Exams: 44% -->
-<!--   - Midterm: 14% -->
-<!--   - Final: 20% -->
-<!--   - Coding Exam 0: 5% -->
-<!--   - Coding Exam 1: 5% -->
-
-<!-- ## Grade cutoffs -->
-
-<!-- These are rough grade cutoffs. I never fit grade distributions to a -->
-<!-- normal curve (e.g., specifying that only 10% of students may earn an -->
-<!-- A), however I may choose to lower the bar for some letter grades. I -->
-<!-- will not curve assignments or projects. -->
-
-<!-- - 93% -- A -->
-<!-- - 89% -- A- -->
-<!-- - 84% -- B+ -->
-<!-- - 80% -- B -->
-<!-- - 77% -- B- -->
-<!-- - 74% -- C+ -->
-<!-- - 70% -- C -->
-<!-- - 65% -- C- -->
-<!-- - 55% -- D -->
-<!-- - 0%  -- F -->
-
-
-<!-- ## Autograder -->
-
-<!-- Projects in this course will be graded by an automatic grader. We may -->
-<!-- adjust projects so that portions of the projects include style-based -->
-<!-- grading, though we will *not* employ subjective grading. More -->
-<!-- pointedly: we will *not* award partial credit for solutions that have -->
-<!-- the right ideas but do not pass our tests. -->
-
-<!-- ## Late Projects and Extensions -->
-
-<!-- I used to extend project deadlines, but I have found that this is -->
-<!-- often unfair to the students who start on time (and more students than -->
-<!-- I would have thought have raised this point to me -->
-<!-- privately). Therefore, project extensions will be rare--and only in -->
-<!-- the event of things such as university closures. Project extensions -->
-<!-- for students will not be granted except for religious observances and -->
-<!-- extenuating circumstances (family illness, etc..). The late policy is -->
-<!-- as follows: -->
-
-<!-- - Projects turned in on time will earn a maximum of 100% -->
-
-<!-- - Projects turned in up to 72 hours late will have a 15% penalty -->
-<!--   applied. -->
-
-<!-- - Projects turned in after 72 hours late (until the end of the term) -->
-<!--   will have a 30% penalty applied. -->
-
-<!-- - Your project grade always be the maximum possible. For example, -->
-<!--   let's say you make an on-time project submission for 60%, but the -->
-<!--   next day you turn in a project which earns an 75%. This submission -->
-<!--   would earn a 63.75%. Five days after the deadline you turn in a -->
-<!--   project earning 100%. Your final score is 70%, as the 70% (100% with -->
-<!--   a 30% penalty) still got the maximum grade of any submission. -->
-
-<!-- You *should* be able to earn **at least** a 70% on all of the projects -->
-<!-- with enough work. -->
+You *should* be able to earn **at least** a 70% on all of the projects
+with enough work.
 
 <!-- ## Topics -->
 
@@ -401,15 +141,13 @@ three categories of assignments:
 <!-- - Logic programming -->
 <!-- - MiniKanren -->
 
-## Projects and Labs
+<!-- ## Projects and Labs -->
 
-This course will have six individual projects. Each of these will be
-completed using the course's autograder. Projects will be handed out
-every few weeks, starting after the second or third week of class. All
-projects are due at 11:59PM the last day of class.
-
-Labs will be led by the TA or instructor to facilitate studying and
-reviewing material presented in lecture.
+<!-- This course will have five autograder projects and a final -->
+<!-- project. The first five will be completed using the course's -->
+<!-- autograder. Projects will be handed out every few weeks, starting -->
+<!-- after the first week of class. All projects are due at 11:59PM, their -->
+<!-- specific deadline days are displayed on the autograder. -->
 
 ## Collaboration and the Honor Code
 
@@ -494,11 +232,11 @@ as possible to begin this process.
 ## Accreditation
 
 As part of the regular ABET accreditation process for the
-undergraduate program in computer science, we may be collecting
-samples of students' work in each of our undergraduate classes.  As a
-result, some of your labs/homeworks/exams may be photocopied/scanned
-(or electronically copied) to be presented for accreditation at some
-later point.
+undergraduate program in computer science, I may be collecting samples
+of students' work in each of our undergraduate classes.  As a result,
+some of your labs/homeworks/exams may be photocopied/scanned (or
+electronically copied) to be presented for accreditation at some later
+point.
 
 ## Student Mental Health
 
