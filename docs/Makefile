@@ -7,7 +7,7 @@ deploy:
 	cp -r _site docs
 	git add docs
 	git commit -m "webpage update"
-	git push origin master
+	git push origin main
 	mv _config.yml.tmp _config.yml
 
 .PHONY: deploy
